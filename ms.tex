@@ -1,0 +1,113 @@
+%\documentclass{article}
+%\usepackage[utf8]{inputenc}
+\documentclass[apj,twocolumn]{aastex631}
+\usepackage{graphicx,here,comment}
+
+\begin{document}
+
+\title{SDSS-GAIA Calibration Note}
+\author{GAIA-SDSS Friends}
+
+\begin{abstract}
+Calibration is hard
+\end{abstract}
+
+%\title{Probing Dark Galaxies through Type Ia Supernovae}
+%\author{Nao Suzuki}
+%\date{February 2021}
+%\usepackage{graphicx}
+%\begin{document}
+%\maketitle
+
+\section{GAIA DR3}
+GAIA DR3 is released in June 2022.   We aim to take advantage of GAIA data, and calibrate SDSS spectra.  We use SDSS DR17, v5-13-2 reduction and SDSS DR8.  Note, DR17 and DR8 does not share the data set.
+
+\section{Basic Statistics}
+\begin{deluxetable*}{rrrrrrr}[ht]
+\tablehead{
+\colhead{Survey}&
+\colhead{Number of Plates}&
+\colhead{Number of Spectra}&
+\colhead{Missing}&
+\colhead{Star}&
+\colhead{Quasar}&
+\colhead{Galaxy}
+}
+\startdata
+SDSS-DR8 & 3,685 & 1,712,809 & 130,391 & 605,884& 142,232& 964,693\\
+SDSS-DR17 & 4,131 & 3,541,517 & 406,483 & 499,127 & 963,616 & 2,078,774\\
+\hline
+GAIAXP-DR8 & 2,782 & 272,729&  & 240,470& 32,259 & N/A \\
+GAIAXP-DR17 & 3,950 & 88,915  &  & 63,083 & 25,832 & N/A
+\enddata
+\end{deluxetable*}
+
+In 'spobj\_dr8.fits', 1,843,200 objects are listed, but some do not have thing\_id, and we are missing 100,000 objects.
+
+3,948,000
+
+\begin{deluxetable*}{llllllllll}[ht]
+%\rotate
+\tablecaption{Host Galaxy Identification}
+\tablehead{
+\colhead{Survey}&
+\colhead{z}&
+\colhead{Filter}&
+\colhead{Depth}&
+\colhead{Radius(DLR)}&
+\colhead{SNIa}&
+\colhead{Hostless}&
+\colhead{Fraction}&
+\colhead{Reference}
+}
+\startdata
+SDSS-II & 0.2$<$z$<$0.4 & r-band & 22.2 & 4R & 1236 & 198 & 16\% & \citet{sako18a} \\
+PS-1    & 0.1$<$z$<$0.4 & i-band & 22.2 & 4R & &&& Scolnic \\
+DES     & 0.1$<$z$<$0.7 & r-band & 25.8-26.3 & 7R & 206 & 4 & 1.9\% & \citet{smith20a} \\
+DES     & 0.1$<$z$<$0.7 & r-band & 25.5-26.9 & 4R & 206 & 13 & 6.3\% & \citet{wiseman20a} \\
+SNLS     & 0.3$<$z$<$0.7 & i-band & 24.0 & 4R & && 6.0\% & Sullivan\\
+HSC     & 0.4$<$z$<$1.4 & r-band & 26.1(Wide), 27.7(UD) & TBD & &&& This work
+\enddata
+\end{deluxetable*}
+
+%\input{tables/table1}
+%\input{tables/tbl1}
+
+\section{Data}
+
+
+\subsection{SDSS-II Supernova Survey}
+
+\subsection{Subaru HSC SSP Data}
+
+
+%\input{fig4}
+
+
+\section{Host Galaxy Identification}
+We use 
+
+%HSC Transient survey is being conducted in deep and ultra-deep region, but for this study, we use the HSC SSP Wide field data.
+
+\section{Table}
+
+%There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.
+%There is another theory which states that this has already happened.
+
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[scale=1.7]{universe}
+%\caption{The Universe}
+%\label{fig:universe}
+%\end{figure}
+
+\section{Conclusion}
+``I always thought something was fundamentally wrong with the universe''
+%``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
+
+%\bibliographystyle{plain}
+%\bibliography{archive,references}
+\clearpage
+\bibliography{archive}
+\end{document}
+
