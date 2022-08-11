@@ -23,7 +23,16 @@ Calibration is hard
 GAIA DR3 is released in June 2022.   We aim to take advantage of GAIA data, and calibrate SDSS spectra.  We use SDSS DR17, v5-13-2 reduction and SDSS DR8.  Note, DR17 and DR8 does not share the data set.
 
 \section{Basic Statistics}
+In 'spobj\_dr8.fits', 1,843,200 objects are listed, but some do not have thing\_id, and we are missing 130,391 objects.
+DR17, spall file contains 3,948,000 spectra, but if we exclude thing\_id=-1, 406,483 objects are dropped out.
+We note, we have a more stellar spectra in DR8 than DR17.
+
+We collected GAIA XP spectra which is a low resolution spectra and becomes public for the first time in June 2022.  In the second half of Table \ref{tbl:summary}, we summarize the number statistics of objects which has both GAIA XP and SDSS spectra.
+
 \begin{deluxetable*}{rrrrrrr}[ht]
+\label{tbl:summary}
+\title{GAIA-SDSS Spectra Summary}
+\tablecaption{Top half shows the number of spectra for DR8 and DR17.  The second half shows the number of GAIA XP spectra which has SDSS spectra}
 \tablehead{
 \colhead{Survey}&
 \colhead{Number of Plates}&
@@ -42,9 +51,32 @@ GAIAXP-DR17 & 3,950 & 88,915  &  & 63,083 & 25,832 & N/A
 \enddata
 \end{deluxetable*}
 
-In 'spobj\_dr8.fits', 1,843,200 objects are listed, but some do not have thing\_id, and we are missing 100,000 objects.
 
-3,948,000
+
+\begin{figure*}%[ht]
+\begin{center}
+\includegraphics[angle=270,width=8.9cm]{figures/120821_01_airmass_vs_dmag_star_dr8.png}
+\includegraphics[angle=270,width=8.9cm]{figures/120821_04_airmass_vs_dmag_quasar_dr8.png}
+\caption{DR8: Comparison of Synthetic Magnitude from Model Spectrum and PSF magnitude as a function of airmass. Stars and Quasars are shown left and right respectively.  We do not see any trend, and in general, spectra are well flux calibrated.}
+\end{center}
+\end{figure*}
+
+\begin{figure*}%[ht]
+\begin{center}
+\includegraphics[angle=270,width=8.9cm]{figures/120821_02_airmass_vs_dmag_star_dr9_redfiber.png}
+\includegraphics[angle=270,width=8.9cm]{figures/120821_05_airmass_vs_dmag_quasar_dr9_redfibers.png}
+\caption{DR9 lambda$\_$eff=5400 : Starting SDSS-III, spectrograph is upgraded.  To enhance S/N in blue, a slight offset of fiber position is introduced as well as washers.  Two fiber positions are named lambda$\_$eff=4000 and 5400.  What is shown here is the case for lambda$\_$eff=5400 which is the same as SDSS DR8.}
+\end{center}
+\end{figure*}
+
+\begin{figure*}%[ht]
+\begin{center}
+\includegraphics[angle=270,width=8.9cm]{figures/120821_03_airmass_vs_dmag_star_dr9_bluefiber.png}
+\includegraphics[angle=270,width=8.9cm]{figures/120821_06_airmass_vs_dmag_quasar_dr9_bluefiber.png}
+\caption{DR9 lambda$\_$eff=4000 : Now, the problem emerges. Enhancing S/N in blue sacrifices the flux calibration.  Washer has 3 layers, z=0, z=175, and z=300 from inner part to outskirts.  When elevation is low, namely airmass is high, hour angle difference becomes eminent, and flux calibration gets difficult.}
+\end{center}
+\end{figure*}
+
 
 \begin{deluxetable*}{llllllllll}[ht]
 %\rotate
