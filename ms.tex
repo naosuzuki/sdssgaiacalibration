@@ -29,6 +29,12 @@ We note, we have a more stellar spectra in DR8 than DR17.
 
 We collected GAIA XP spectra which is a low resolution spectra and becomes public for the first time in June 2022.  In the second half of Table \ref{tbl:summary}, we summarize the number statistics of objects which has both GAIA XP and SDSS spectra.
 
+\section{SDSS Spectrophotometry Test}
+First of all, let's test how good the SDSS spectrophotometry is.   For point sources, we can test if the PSF magnitudes match to the spectrophotometric magnitudes.
+We note the spectrograph has changed from SDSS-III.   Here we use both data sete from SDSS-I/II which is represeted by DR8, and SDSS-III/IV are all in DR17.   We test with stars and quasars so that we can test point source photometry.
+
+Our goal is that spectrophotometry matches to PSF photometry.   
+
 \begin{deluxetable*}{rrrrrrr}[ht]
 \label{tbl:summary}
 \title{GAIA-SDSS Spectra Summary}
@@ -55,6 +61,7 @@ GAIAXP-DR17 & 3,950 & 88,915  &  & 63,083 & 25,832 & N/A
 
 \begin{figure*}%[ht]
 \begin{center}
+\label{fig:airmassvsmag}
 \includegraphics[angle=270,width=8.9cm]{figures/120821_01_airmass_vs_dmag_star_dr8.png}
 \includegraphics[angle=270,width=8.9cm]{figures/120821_04_airmass_vs_dmag_quasar_dr8.png}
 \caption{DR8: Comparison of Synthetic Magnitude from Model Spectrum and PSF magnitude as a function of airmass. Stars and Quasars are shown left and right respectively.  We do not see any trend, and in general, spectra are well flux calibrated.}
@@ -176,6 +183,36 @@ u-band shows a large offset but it is due to spectral wavelength does not cover 
 
 \begin{figure*}%[ht]
 \begin{center}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_g_dr17star.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_r_dr17star.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_i_dr17star.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_z_dr17star.png}
+\caption{DR8 Star vs. GAIA g-mag: Color vs. $\Delta$M.  Testing GAIA mag color vs. SDSS mag - GAIA g-bmag.   GAIA g-mag is the whole filter system. SDSS-i band could be a good representative of GAIA-g.}
+\end{center}
+\end{figure*}
+
+\begin{figure*}%[ht]
+\begin{center}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_g_bp_dr17star.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_r_bp_dr17star.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_i_bp_dr17star.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_z_bp_dr17star.png}
+\caption{DR8 Star vs. GAIA bp-mag : Color vs. $\Delta$M.  Note SDSS-g and SDSS-r are close to GAIA-bp}
+\end{center}
+\end{figure*}
+
+\begin{figure*}%[ht]
+\begin{center}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_g_rp_dr17star.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_r_rp_dr17star.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_i_rp_dr17star.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_z_rp_dr17star.png}
+\caption{DR8 Star vs. GAIA rp-mag : Color vs. $\Delta$M.  Note SDSS-i and SDSS-z are close to GAIA-rp as we expected.}
+\end{center}
+\end{figure*}
+
+\begin{figure*}%[ht]
+\begin{center}
 \includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_g_dr8quasar.png}
 \includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_r_dr8quasar.png}
 \includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_i_dr8quasar.png}
@@ -203,6 +240,47 @@ u-band shows a large offset but it is due to spectral wavelength does not cover 
 \caption{DR8 Quasar vs. GAIA-rp mag: Color vs. $\Delta$M.  The same plot but with Quasars.  The color range of quasars are limited.}
 \end{center}
 \end{figure*}
+
+\begin{figure*}%[ht]
+\begin{center}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_g_dr17quasar.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_r_dr17quasar.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_i_dr17quasar.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_z_dr17quasar.png}
+\caption{DR17 Quasar: Color vs. $\Delta$M.  The same plot but with Quasars.  The color range of quasars are limited.}
+\end{center}
+\end{figure*}
+
+\begin{figure*}%[ht]
+\begin{center}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_g_bp_dr17quasar.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_r_bp_dr17quasar.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_i_bp_dr17quasar.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_z_bp_dr17quasar.png}
+\caption{DR17 Quasar vs. GAIA-bp mag: Color vs. $\Delta$M.  The same plot but with Quasars.  The color range of quasars are limited.}
+\end{center}
+\end{figure*}
+
+\begin{figure*}%[ht]
+\begin{center}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_g_rp_dr17quasar.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_r_rp_dr17quasar.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_i_rp_dr17quasar.png}
+\includegraphics[angle=0,width=8.9cm]{figures/20220812_color_dmag_z_rp_dr17quasar.png}
+\caption{DR17 Quasar vs. GAIA-rp mag: Color vs. $\Delta$M.  The same plot but with Quasars.  The color range of quasars are limited.}
+\end{center}
+\end{figure*}
+
+\begin{figure*}%[ht]
+\begin{center}
+\includegraphics[angle=0,width=8.9cm]{figures/20220816}
+\includegraphics[angle=0,width=8.9cm]{figures/}
+\includegraphics[angle=0,width=8.9cm]{figures/}
+\includegraphics[angle=0,width=8.9cm]{figures/}
+\caption{DR17 Quasar vs. GAIA-rp mag: Color vs. $\Delta$M.  The same plot but with Quasars.  The color range of quasars are limited.}
+\end{center}
+\end{figure*}
+
 
 \begin{deluxetable*}{llllllllll}[ht]
 %\rotate
